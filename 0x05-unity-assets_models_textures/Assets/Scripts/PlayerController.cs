@@ -89,4 +89,11 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Fall_space"))
+    //     {
+    //         transform.position = new Vector3(0, 5, 0);
+    //     }
+    // }
 }
