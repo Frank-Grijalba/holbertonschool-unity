@@ -50,7 +50,8 @@ public class PlayerController : MonoBehaviour
         // * playerSpeed * Time.deltaTime = controla la velocidad del jugador
         player.Move(movePlayer * Time.deltaTime);
 
-        Debug.Log(player.velocity.magnitude);
+       if (transform.position.y < -40)
+            transform.position = new Vector3(0, 60, 0);
     }
 
     public void CamDirection()
