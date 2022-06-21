@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
     [Space]
     [Range(0f, 10f)]
     public float turnSpeed;
+    public bool isInverted;
 
     //-----Privates functions-----\\
     private void Start()
@@ -37,7 +38,10 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offset;
+        if (isInverted)
+            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * Quaternion.AngleAxis(-Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offset;
+        else
+            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offset;
         transform.position = player.position + offset;
         transform.LookAt(player.position);
     }

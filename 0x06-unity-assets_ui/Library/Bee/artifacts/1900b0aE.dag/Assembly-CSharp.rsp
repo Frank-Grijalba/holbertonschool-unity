@@ -338,9 +338,11 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/OptionsMenu.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TimerTrigger.cs"
+"Assets/Scripts/WinMenu.cs"
 "Assets/Scripts/WinTrigger.cs"
 -langversion:9.0
 
